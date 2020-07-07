@@ -42,18 +42,18 @@ npm run start
 
 To register a new user you can issue a POST request:
 
-```
-curl -X POST -d '{"username": "joe", "password":"1234"}' http://localhost:3000/auth/register -H "Content-Type: application/json"
+```bash
+curl -X POST -d '{"username": "joe", "password":"1234"}' http://localhost:3000/user/register -H "Content-Type: application/json"
 ```
 
 To login issue a POST request you should receive a token back if successful like
 
-```
-curl -X POST -d '{"username": "joe", "password":"1234"}' http://localhost:3000/auth/login -H "Content-Type: application/json"
+```bash
+curl -X POST -d '{"username": "joe", "password":"1234"}' http://localhost:3000/user/login -H "Content-Type: application/json"
 ```
 
 Check if token is valid
 
-```
-curl -X GET -H "Accept: application/json" http://localhost:3000/auth/checkToken\?token\=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJzYnMiLCJleHAiOjE1OTI1NTA1NDQsImlhdCI6MTU5MjU0Njk0NH0.RTFWeuNJw6loxQUUio5KhC7u1ufyfkudbkg21eSUxsg
+```bash
+curl -X GET -H "Accept: application/json" http://localhost:3000/user/checkToken\?token\=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJzYnMiLCJleHAiOjE1OTI1NTA1NDQsImlhdCI6MTU5MjU0Njk0NH0.RTFWeuNJw6loxQUUio5KhC7u1ufyfkudbkg21eSUxsg
 ```
